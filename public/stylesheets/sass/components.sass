@@ -1,0 +1,47 @@
+!rounded_corner_size = 10px
+
+.col
+  :float left
+
+.rcol
+  :float right
+
+.clear-left
+  :clear left
+
+.clear-right
+  :clear right
+
+.clear-both
+  :clear both
+
+ul.vert-bar
+  :padding = !gap_none
+  :margin = !gap_none
+  :list-style = none
+
+.rounded-box
+  :border-collapse collapse
+  :width 100%
+  :position relative
+
+  td
+    :padding !gap_none
+
+  .corner
+    :background-repeat no-repeat
+    :padding = !gap_none
+    :margin = !gap_none
+    :height = !rounded_corner_size
+    :width = !rounded_corner_size
+
+  .top .edge, .bottom .edge
+    :background-repeat repeat-x
+
+  .middle .edge
+    :background-repeat repeat-y
+
+  .content-cell
+    :position relative
+    :margin = !gap_none
+    :padding = !gap_none

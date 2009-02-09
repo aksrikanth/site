@@ -1,0 +1,31 @@
+- if @title.nil?
+  - @title = "Srikanth's Homepage"
+!!! XML
+!!!
+%html{ html_attrs }
+  %head
+    %title
+      = @title
+    = stylesheet_link_tag 'srikanthak'
+    %link{ :rel => 'icon', :href => '/images/favicon.ico'}
+  %body
+    .headermask
+      #header
+        = link_to image_tag('icon.png'), home_path
+        = link_to image_tag('logo.png'), home_path
+
+    .mainmask
+      - rounded_box 'black-transparent' do
+        .threecol
+          .colright
+            .colmid
+              .colleft
+                #main.col1
+                  = yield :layout
+                #sidebar.col2
+                  = render :partial => 'layouts/nav'
+                #rightbar.col3
+                  .right
+
+    .footermask
+      #footer &copy; 2005 - 2009 Srikanth Agaram

@@ -1,0 +1,10 @@
+.black-transparent-rounded-box .top .left {
+  background-image: url(/images/rounded-boxes/rounded-box-black-transparent-nw.png); }
+.black-transparent-rounded-box .top .right {
+  background-image: url(/images/rounded-boxes/rounded-box-black-transparent-ne.png); }
+.black-transparent-rounded-box .bottom .left {
+  background-image: url(/images/rounded-boxes/rounded-box-black-transparent-sw.png); }
+.black-transparent-rounded-box .bottom .right {
+  background-image: url(/images/rounded-boxes/rounded-box-black-transparent-se.png); }
+.black-transparent-rounded-box .edge {
+  background-color: #000000; }
