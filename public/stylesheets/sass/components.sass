@@ -15,33 +15,21 @@
 .clear-both
   :clear both
 
+.gutter
+  :width = !gutter_width
+  :height = !gutter_height
+
+.gutter-internal
+  :width = !gutter_internal_width
+  :height = !gutter_height
+
 ul.vert-bar
   :padding = !gap_none
   :margin = !gap_none
   :list-style = none
 
-.rounded-box
+table
   :border-collapse collapse
-  :width 100%
-  :position relative
-
-  td
-    :padding !gap_none
-
-  .corner
-    :background-repeat no-repeat
-    :padding = !gap_none
-    :margin = !gap_none
-    :height = !rounded_corner_size
-    :width = !rounded_corner_size
-
-  .top .edge, .bottom .edge
-    :background-repeat repeat-x
-
-  .middle .edge
-    :background-repeat repeat-y
-
-  .content-cell
-    :position relative
-    :margin = !gap_none
-    :padding = !gap_none
+  tr, td
+    :padding 0px
+    :margin 0px

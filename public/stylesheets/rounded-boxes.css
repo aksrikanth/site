@@ -1,10 +1,81 @@
-.black-transparent-rounded-box .top .left {
-  background-image: url(/images/rounded-boxes/rounded-box-black-transparent-nw.png); }
-.black-transparent-rounded-box .top .right {
-  background-image: url(/images/rounded-boxes/rounded-box-black-transparent-ne.png); }
-.black-transparent-rounded-box .bottom .left {
-  background-image: url(/images/rounded-boxes/rounded-box-black-transparent-sw.png); }
-.black-transparent-rounded-box .bottom .right {
-  background-image: url(/images/rounded-boxes/rounded-box-black-transparent-se.png); }
-.black-transparent-rounded-box .edge {
-  background-color: #000000; }
+/*
+Sass::SyntaxError: Undefined constant: "!secondary_color_a_3".
+on line 18 of /home/srikanth/work/projects/site/public/stylesheets/sass/rounded-boxes.sass
+
+14:   .blue-transparent-rounded-box-e,
+15:   .blue-transparent-rounded-box-w,
+16:   .blue-transparent-rounded-box-s,
+17:   .blue-transparent-rounded-box-content-cell
+18:     :background-color = !secondary_color_a_3
+19: 
+20: .white-blue-rounded-box
+21:   :height 100%
+22:   :width 100%
+23:   .white-blue-rounded-box-corner
+24:     :width 5px
+
+
+Backtrace:
+/home/srikanth/work/projects/site/public/stylesheets/sass/rounded-boxes.sass:18
+/home/srikanth/work/projects/site/vendor/plugins/haml-2.0.6/rails/../lib/sass/constant.rb:209:in `get_constant'
+/home/srikanth/work/projects/site/vendor/plugins/haml-2.0.6/rails/../lib/sass/constant.rb:192:in `operationalize'
+/home/srikanth/work/projects/site/vendor/plugins/haml-2.0.6/rails/../lib/sass/constant.rb:182:in `operationalize'
+/home/srikanth/work/projects/site/vendor/plugins/haml-2.0.6/rails/../lib/sass/constant.rb:45:in `parse'
+/home/srikanth/work/projects/site/vendor/plugins/haml-2.0.6/rails/../lib/sass/engine.rb:329:in `parse_attribute'
+/home/srikanth/work/projects/site/vendor/plugins/haml-2.0.6/rails/../lib/sass/engine.rb:282:in `parse_line'
+/home/srikanth/work/projects/site/vendor/plugins/haml-2.0.6/rails/../lib/sass/engine.rb:187:in `build_tree'
+/home/srikanth/work/projects/site/vendor/plugins/haml-2.0.6/rails/../lib/sass/engine.rb:237:in `build_tree'
+/home/srikanth/work/projects/site/vendor/plugins/haml-2.0.6/rails/../lib/sass/engine.rb:226:in `build_tree'
+/home/srikanth/work/projects/site/vendor/plugins/haml-2.0.6/rails/../lib/sass/engine.rb:237:in `build_tree'
+/home/srikanth/work/projects/site/vendor/plugins/haml-2.0.6/rails/../lib/sass/engine.rb:116:in `render_to_tree'
+/home/srikanth/work/projects/site/vendor/plugins/haml-2.0.6/rails/../lib/sass/engine.rb:88:in `render'
+/home/srikanth/work/projects/site/vendor/plugins/haml-2.0.6/rails/../lib/sass/plugin.rb:65:in `update_stylesheets'
+/home/srikanth/work/projects/site/vendor/plugins/haml-2.0.6/rails/../lib/sass/plugin.rb:53:in `each'
+/home/srikanth/work/projects/site/vendor/plugins/haml-2.0.6/rails/../lib/sass/plugin.rb:53:in `update_stylesheets'
+/home/srikanth/work/projects/site/vendor/plugins/haml-2.0.6/rails/../lib/sass/plugin/rails.rb:16:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+/usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+/usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Sass::SyntaxError: Undefined constant: \"!secondary_color_a_3\".\A on line 18 of /home/srikanth/work/projects/site/public/stylesheets/sass/rounded-boxes.sass\A \A 14:   .blue-transparent-rounded-box-e,\A 15:   .blue-transparent-rounded-box-w,\A 16:   .blue-transparent-rounded-box-s,\A 17:   .blue-transparent-rounded-box-content-cell\A 18:     :background-color = !secondary_color_a_3\A 19: \A 20: .white-blue-rounded-box\A 21:   :height 100%\A 22:   :width 100%\A 23:   .white-blue-rounded-box-corner\A 24:     :width 5px\A "; }

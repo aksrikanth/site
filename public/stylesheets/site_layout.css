@@ -1,36 +1,36 @@
 /*
-Sass::SyntaxError: Undefined constant: "!header_height".
-on line 6 of /home/srikanth/work/projects/www/srikanthak/public/stylesheets/sass/site_layout.sass
+Sass::SyntaxError: Undefined constant: "!gap_huge".
+on line 6 of /home/srikanth/work/projects/site/public/stylesheets/sass/site_layout.sass
 
-2:   :width 90%
+2:   :width 900px
 3:   :margin auto
 4: 
-5: #header
-6:   :height = !header_height
-7:   :background-color = !header_bg_color
-8: 
-9:   .title
-10:     :color = white
-11:     :margin = !gap_none
-12:     :padding = !gap_none !title_padding
+5: .mainmask
+6:   :padding-bottom = !gap_huge
+7: 
+8: #header
+9:   :background-color = !header_bg_color
+10: 
+11:   .title
+12:     :color = white
 
 
 Backtrace:
-/home/srikanth/work/projects/www/srikanthak/public/stylesheets/sass/site_layout.sass:6
-/usr/lib/ruby/gems/1.8/gems/haml-2.0.6/lib/sass/constant.rb:209:in `get_constant'
-/usr/lib/ruby/gems/1.8/gems/haml-2.0.6/lib/sass/constant.rb:192:in `operationalize'
-/usr/lib/ruby/gems/1.8/gems/haml-2.0.6/lib/sass/constant.rb:182:in `operationalize'
-/usr/lib/ruby/gems/1.8/gems/haml-2.0.6/lib/sass/constant.rb:45:in `parse'
-/usr/lib/ruby/gems/1.8/gems/haml-2.0.6/lib/sass/engine.rb:329:in `parse_attribute'
-/usr/lib/ruby/gems/1.8/gems/haml-2.0.6/lib/sass/engine.rb:282:in `parse_line'
-/usr/lib/ruby/gems/1.8/gems/haml-2.0.6/lib/sass/engine.rb:187:in `build_tree'
-/usr/lib/ruby/gems/1.8/gems/haml-2.0.6/lib/sass/engine.rb:237:in `build_tree'
-/usr/lib/ruby/gems/1.8/gems/haml-2.0.6/lib/sass/engine.rb:116:in `render_to_tree'
-/usr/lib/ruby/gems/1.8/gems/haml-2.0.6/lib/sass/engine.rb:88:in `render'
-/usr/lib/ruby/gems/1.8/gems/haml-2.0.6/lib/sass/plugin.rb:65:in `update_stylesheets'
-/usr/lib/ruby/gems/1.8/gems/haml-2.0.6/lib/sass/plugin.rb:53:in `each'
-/usr/lib/ruby/gems/1.8/gems/haml-2.0.6/lib/sass/plugin.rb:53:in `update_stylesheets'
-/usr/lib/ruby/gems/1.8/gems/haml-2.0.6/lib/sass/plugin/rails.rb:16:in `process'
+/home/srikanth/work/projects/site/public/stylesheets/sass/site_layout.sass:6
+/home/srikanth/work/projects/site/vendor/plugins/haml-2.0.6/rails/../lib/sass/constant.rb:209:in `get_constant'
+/home/srikanth/work/projects/site/vendor/plugins/haml-2.0.6/rails/../lib/sass/constant.rb:192:in `operationalize'
+/home/srikanth/work/projects/site/vendor/plugins/haml-2.0.6/rails/../lib/sass/constant.rb:182:in `operationalize'
+/home/srikanth/work/projects/site/vendor/plugins/haml-2.0.6/rails/../lib/sass/constant.rb:45:in `parse'
+/home/srikanth/work/projects/site/vendor/plugins/haml-2.0.6/rails/../lib/sass/engine.rb:329:in `parse_attribute'
+/home/srikanth/work/projects/site/vendor/plugins/haml-2.0.6/rails/../lib/sass/engine.rb:282:in `parse_line'
+/home/srikanth/work/projects/site/vendor/plugins/haml-2.0.6/rails/../lib/sass/engine.rb:187:in `build_tree'
+/home/srikanth/work/projects/site/vendor/plugins/haml-2.0.6/rails/../lib/sass/engine.rb:237:in `build_tree'
+/home/srikanth/work/projects/site/vendor/plugins/haml-2.0.6/rails/../lib/sass/engine.rb:116:in `render_to_tree'
+/home/srikanth/work/projects/site/vendor/plugins/haml-2.0.6/rails/../lib/sass/engine.rb:88:in `render'
+/home/srikanth/work/projects/site/vendor/plugins/haml-2.0.6/rails/../lib/sass/plugin.rb:65:in `update_stylesheets'
+/home/srikanth/work/projects/site/vendor/plugins/haml-2.0.6/rails/../lib/sass/plugin.rb:53:in `each'
+/home/srikanth/work/projects/site/vendor/plugins/haml-2.0.6/rails/../lib/sass/plugin.rb:53:in `update_stylesheets'
+/home/srikanth/work/projects/site/vendor/plugins/haml-2.0.6/rails/../lib/sass/plugin/rails.rb:16:in `process'
 /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
 /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
 /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
@@ -76,4 +76,4 @@ script/server:3
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Sass::SyntaxError: Undefined constant: \"!header_height\".\A on line 6 of /home/srikanth/work/projects/www/srikanthak/public/stylesheets/sass/site_layout.sass\A \A 2:   :width 90%\A 3:   :margin auto\A 4: \A 5: #header\A 6:   :height = !header_height\A 7:   :background-color = !header_bg_color\A 8: \A 9:   .title\A 10:     :color = white\A 11:     :margin = !gap_none\A 12:     :padding = !gap_none !title_padding\A "; }
+  content: "Sass::SyntaxError: Undefined constant: \"!gap_huge\".\A on line 6 of /home/srikanth/work/projects/site/public/stylesheets/sass/site_layout.sass\A \A 2:   :width 900px\A 3:   :margin auto\A 4: \A 5: .mainmask\A 6:   :padding-bottom = !gap_huge\A 7: \A 8: #header\A 9:   :background-color = !header_bg_color\A 10: \A 11:   .title\A 12:     :color = white\A "; }

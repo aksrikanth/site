@@ -1,36 +1,36 @@
 /*
-Sass::SyntaxError: Undefined constant: "!gap_none".
-on line 19 of /home/srikanth/work/projects/www/srikanthak/public/stylesheets/sass/components.sass
+Sass::SyntaxError: Undefined constant: "!gutter_width".
+on line 19 of /home/srikanth/work/projects/site/public/stylesheets/sass/components.sass
 
 15: .clear-both
 16:   :clear both
 17: 
-18: ul.vert-bar
-19:   :padding = !gap_none
-20:   :margin = !gap_none
-21:   :list-style = none
-22: 
-23: .rounded-box
-24:   :border-collapse collapse
-25:   :width 100%
+18: .gutter
+19:   :width = !gutter_width
+20:   :height = !gutter_height
+21: 
+22: .gutter-internal
+23:   :width = !gutter_internal_width
+24:   :height = !gutter_height
+25: 
 
 
 Backtrace:
-/home/srikanth/work/projects/www/srikanthak/public/stylesheets/sass/components.sass:19
-/usr/lib/ruby/gems/1.8/gems/haml-2.0.6/lib/sass/constant.rb:209:in `get_constant'
-/usr/lib/ruby/gems/1.8/gems/haml-2.0.6/lib/sass/constant.rb:192:in `operationalize'
-/usr/lib/ruby/gems/1.8/gems/haml-2.0.6/lib/sass/constant.rb:182:in `operationalize'
-/usr/lib/ruby/gems/1.8/gems/haml-2.0.6/lib/sass/constant.rb:45:in `parse'
-/usr/lib/ruby/gems/1.8/gems/haml-2.0.6/lib/sass/engine.rb:329:in `parse_attribute'
-/usr/lib/ruby/gems/1.8/gems/haml-2.0.6/lib/sass/engine.rb:282:in `parse_line'
-/usr/lib/ruby/gems/1.8/gems/haml-2.0.6/lib/sass/engine.rb:187:in `build_tree'
-/usr/lib/ruby/gems/1.8/gems/haml-2.0.6/lib/sass/engine.rb:237:in `build_tree'
-/usr/lib/ruby/gems/1.8/gems/haml-2.0.6/lib/sass/engine.rb:116:in `render_to_tree'
-/usr/lib/ruby/gems/1.8/gems/haml-2.0.6/lib/sass/engine.rb:88:in `render'
-/usr/lib/ruby/gems/1.8/gems/haml-2.0.6/lib/sass/plugin.rb:65:in `update_stylesheets'
-/usr/lib/ruby/gems/1.8/gems/haml-2.0.6/lib/sass/plugin.rb:53:in `each'
-/usr/lib/ruby/gems/1.8/gems/haml-2.0.6/lib/sass/plugin.rb:53:in `update_stylesheets'
-/usr/lib/ruby/gems/1.8/gems/haml-2.0.6/lib/sass/plugin/rails.rb:16:in `process'
+/home/srikanth/work/projects/site/public/stylesheets/sass/components.sass:19
+/home/srikanth/work/projects/site/vendor/plugins/haml-2.0.6/rails/../lib/sass/constant.rb:209:in `get_constant'
+/home/srikanth/work/projects/site/vendor/plugins/haml-2.0.6/rails/../lib/sass/constant.rb:192:in `operationalize'
+/home/srikanth/work/projects/site/vendor/plugins/haml-2.0.6/rails/../lib/sass/constant.rb:182:in `operationalize'
+/home/srikanth/work/projects/site/vendor/plugins/haml-2.0.6/rails/../lib/sass/constant.rb:45:in `parse'
+/home/srikanth/work/projects/site/vendor/plugins/haml-2.0.6/rails/../lib/sass/engine.rb:329:in `parse_attribute'
+/home/srikanth/work/projects/site/vendor/plugins/haml-2.0.6/rails/../lib/sass/engine.rb:282:in `parse_line'
+/home/srikanth/work/projects/site/vendor/plugins/haml-2.0.6/rails/../lib/sass/engine.rb:187:in `build_tree'
+/home/srikanth/work/projects/site/vendor/plugins/haml-2.0.6/rails/../lib/sass/engine.rb:237:in `build_tree'
+/home/srikanth/work/projects/site/vendor/plugins/haml-2.0.6/rails/../lib/sass/engine.rb:116:in `render_to_tree'
+/home/srikanth/work/projects/site/vendor/plugins/haml-2.0.6/rails/../lib/sass/engine.rb:88:in `render'
+/home/srikanth/work/projects/site/vendor/plugins/haml-2.0.6/rails/../lib/sass/plugin.rb:65:in `update_stylesheets'
+/home/srikanth/work/projects/site/vendor/plugins/haml-2.0.6/rails/../lib/sass/plugin.rb:53:in `each'
+/home/srikanth/work/projects/site/vendor/plugins/haml-2.0.6/rails/../lib/sass/plugin.rb:53:in `update_stylesheets'
+/home/srikanth/work/projects/site/vendor/plugins/haml-2.0.6/rails/../lib/sass/plugin/rails.rb:16:in `process'
 /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
 /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
 /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
@@ -76,4 +76,4 @@ script/server:3
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Sass::SyntaxError: Undefined constant: \"!gap_none\".\A on line 19 of /home/srikanth/work/projects/www/srikanthak/public/stylesheets/sass/components.sass\A \A 15: .clear-both\A 16:   :clear both\A 17: \A 18: ul.vert-bar\A 19:   :padding = !gap_none\A 20:   :margin = !gap_none\A 21:   :list-style = none\A 22: \A 23: .rounded-box\A 24:   :border-collapse collapse\A 25:   :width 100%\A "; }
+  content: "Sass::SyntaxError: Undefined constant: \"!gutter_width\".\A on line 19 of /home/srikanth/work/projects/site/public/stylesheets/sass/components.sass\A \A 15: .clear-both\A 16:   :clear both\A 17: \A 18: .gutter\A 19:   :width = !gutter_width\A 20:   :height = !gutter_height\A 21: \A 22: .gutter-internal\A 23:   :width = !gutter_internal_width\A 24:   :height = !gutter_height\A 25: \A "; }

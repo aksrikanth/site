@@ -1,9 +1,11 @@
-.headermask
-  :width 90%
+.headermask, .mainmask
+  :width 900px
   :margin auto
 
+.mainmask
+  :padding-bottom = !gap_huge
+
 #header
-  :height = !header_height
   :background-color = !header_bg_color
 
   .title
@@ -11,78 +13,43 @@
     :margin = !gap_none
     :padding = !gap_none !title_padding
 
-// Three column layout rules {{{
-.mainmask
-  :clear = both
-  :overflow hidden
-  :position = relative
-  :width = 90%
-  :margin auto
+.main-layout
+  :background-color = !secondary_color_a_3
 
-.threecol
-  :position relative
-  :width = 100%
-  :overflow hidden
+  .layout-gutter
+    :width 5px
+  .layout-sep
+    :height 5px
+    :line-height 0px
 
-.colleft, .colmid, .colright
-  // Fix for ie 7 overflow hidden bug
-  :position = relative
-  :float = left
-  // Width of page
-  :width = !total_width
-
-.col1, .col2, .col3
-  :float = left
-  :position = relative
-  // Left and right padding should be 0 top and bottom to taste
-  :padding = 5px !gap_none
-
-.colright
-  // Backgrund of right column
-  :background-color = !right_col_bg_color
-
-.colmid
-  // Width of right column
-  :right = !right_width
-  // Color of center column
-  :background-color = !main_bg_color
-
-.colleft
-  // Width of middle column
-  :right = !main_width
-  // Color of left column
-  :background-color = !sidebar_bg_color
-
-.col1
-  // Width of center column content (column - padding)
-  :width = !main_width - 2*!main_gap_width
-  // 100 + padding of center column
-  :left = !total_width + !main_gap_width
-
-.col2
-  // Width of left column content (column - padding)
-  :width = !sidebar_width - 2*!sidebar_gap_width
-  // width of (right column) plus (center column left and right padding) plus (left column left padding)
-  :left = !right_width + 2*!main_gap_width + !sidebar_gap_width
-
-.col3
-  // Width of right column content (column - padding)
-  :width = !right_width - 2*!right_gap_width
-  // (100% - left column width) plus (center column left and right padding) plus (left column left and right padding) plus (right column left padding)
-  :left = (!total_width - !sidebar_width) + 2*!main_gap_width + 2*!sidebar_gap_width + !right_gap_width
-// }}}
+.main-row
+  :min-height 600px
 
 #sidebar
+  :width 175px
+  :height 100%
+
+  .white-blue-rounded-box-content-cell
+    :vertical-align top
+
+  .vert-bar
+    :padding-top = !gap_huge
+
+    li
+      :margin = !gap_medium !gap_none
+
   a
-    :color = !sidebar_link_color
     :display = block
     :padding = 2px 5px
+    :background-color = !sidebar_link_bg_color
+
     &:hover
-      :color = !sidebar_link_hover_color
-      :background-color = !sidebar_link_hover_bg_color
       :text-decoration none
+      :background-color = !sidebar_link_hover_bg_color
+      :color = !secondary_color_a_3
 
 #main
+  :width 700px
   :min-height = 600px
 
 .footermask
@@ -93,4 +60,4 @@
   :clear both
   :text-align center
   :height = !footer_height
-  :background-color = !footer_bg_color
+  :color = !footer_color

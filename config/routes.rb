@@ -41,6 +41,7 @@ ActionController::Routing::Routes.draw do |map|
   map.connect 'articles/:title', :controller => 'articles', :action => 'show'
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
+  map.resource :articles
   map.root :controller => 'home'
   def home_path(*args) ; root_path(*args) ; end
   def home_url(*args) ; root_url(*args) ; end
