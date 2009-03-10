@@ -8,6 +8,6 @@
             :title => article[:basename]         |
         == [ #{ article[:time].to_s(:short) } ]
       %blockquote
-        = render 'articles/' + article[:basename]
+        = render 'articles/posts/' + article[:basename]
 - else
   There's nothing to see here. Please move along.

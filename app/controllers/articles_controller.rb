@@ -1,7 +1,8 @@
 class ArticlesController < ApplicationController
   def show
-    if template_exists? path = 'articles/posts' + params[:title]
-      render :action => params[:title]
+    template = 'articles/posts/' + params[:title]
+    if template_exists? template
+      render :template => template
     else
       raise ::ActionController::RoutingError,
         "Recognition failed for #{request.path.inspect}"
@@ -13,7 +14,6 @@ class ArticlesController < ApplicationController
     @short = true
     Dir.chdir('app/views/articles/posts/') do
       files = Dir.glob('[^_]*.html.haml')
-      files.delete 'index.html.haml'
 
       @articles = files.map do |file|
         {
