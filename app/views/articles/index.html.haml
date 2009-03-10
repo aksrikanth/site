@@ -1,0 +1,13 @@
+- unless @articles.nil? or @articles.blank?
+  - @articles.each do |article|
+    .entry
+      %h3
+        = link_to article[:basename].humanize,   |
+            :controller => 'articles',           |
+            :action => 'show',                   |
+            :title => article[:basename]         |
+        == [ #{ article[:time].to_s(:short) } ]
+      %blockquote
+        = render 'articles/' + article[:basename]
+- else
+  There's nothing to see here. Please move along.

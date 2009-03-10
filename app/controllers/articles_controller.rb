@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
   def show
-    if template_exists? path = 'articles/' + params[:title]
+    if template_exists? path = 'articles/posts' + params[:title]
       render :action => params[:title]
     else
       raise ::ActionController::RoutingError,
@@ -11,7 +11,7 @@ class ArticlesController < ApplicationController
   def index
     @articles = []
     @short = true
-    Dir.chdir('app/views/articles/') do
+    Dir.chdir('app/views/articles/posts/') do
       files = Dir.glob('[^_]*.html.haml')
       files.delete 'index.html.haml'
 
