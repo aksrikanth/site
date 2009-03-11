@@ -8,6 +8,12 @@ body
     :size = 22px
     :stretch semi-condensed
 
+h1, h2, h3, h4, h5, h6
+  :color = !title_color
+  :margin = !gap_none
+  a
+    :color = !title_color
+
 h1
   :font-size = 2.2em
 
@@ -27,8 +33,7 @@ h6
   :font-size = 0.85em
 
 a
-  :color = !site_link_color
-  :font-weight bold
+  :color = !link_color
   :text-decoration none
 
   &:hover
@@ -37,4 +42,7 @@ a
     :font-weight normal
   img
     :border none
+
+a.no-hover:hover
+  :text-decoration none
 // }}}

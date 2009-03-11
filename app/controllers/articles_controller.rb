@@ -1,29 +1,20 @@
 class ArticlesController < ApplicationController
+  before_filter :load_posts
+
+  POSTS_DIR = "#{RAILS_ROOT}/app/views/articles/posts/"
+  POSTS_FILE = "#{POSTS_DIR}posts.yml"
+
+  def load_posts
+    @posts = YAML::load(File.open(POSTS_FILE))
+  end
+
   def show
-    template = 'articles/posts/' + params[:title]
-    if template_exists? template
-      render :template => template
-    else
-      raise ::ActionController::RoutingError,
-        "Recognition failed for #{request.path.inspect}"
-    end
+    puts params[:id]
   end
 
   def index
-    @articles = []
-    @short = true
-    Dir.chdir('app/views/articles/posts/') do
-      files = Dir.glob('[^_]*.html.haml')
-
-      @articles = files.map do |file|
-        {
-          :basename => file.gsub(/.html.haml$/, ''),
-          :time => File.mtime(file),
-        }
-      end
-      @articles.sort do |a, b|
-        b[:time] <=> a[:time]
-      end
+    @articles = @posts.sort do |a, b|
+      b[:time] <=> a[:time]
     end
   end
 end

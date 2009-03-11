@@ -44,7 +44,7 @@ module HamlHelper
             haml_tag :td, :class => "#{type}-rounded-box-gap" unless i == 0
             haml_tag :td, :class => "#{type}-rounded-box-w"
             haml_tag :td, :class => "#{type}-rounded-box-content-cell", :id => columns[i][:id] do
-              haml_tag :div, :class => "#{type}-rounded-box-content" do
+              haml_tag :div, :class => "#{type}-rounded-box-content", :id => "#{columns[i][:id]}-content" do
                 if columns[i][:yield]
                   yield
                 else

@@ -1,13 +1,16 @@
+%h1.title Articles
+.sep
 - unless @articles.nil? or @articles.blank?
   - @articles.each do |article|
     .entry
-      %h3
-        = link_to article[:basename].humanize,   |
-            :controller => 'articles',           |
-            :action => 'show',                   |
-            :title => article[:basename]         |
-        == [ #{ article[:time].to_s(:short) } ]
-      %blockquote
-        = render 'articles/posts/' + article[:basename]
+      .title
+        .rcol.time== [ #{ article[:time].to_s(:short) } ]
+        .col
+          %h3
+            = link_to article[:title].titleize, article_path(article[:id]), :class => 'no-hover'
+        .clear-both
+      %blockquote.snippet
+        = article[:snippet]
+        .continue= link_to 'read entire article &raquo;', article_path(article[:id])
 - else
   There's nothing to see here. Please move along.
