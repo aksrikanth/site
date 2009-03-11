@@ -1,3 +1,6 @@
+html, body
+  :height 100%
+
 .headermask, .mainmask
   :width 900px
   :margin auto
@@ -13,24 +16,10 @@
     :margin = !gap_none
     :padding = !gap_none !title_padding
 
-.main-layout
-  :background-color = !secondary_color_a_3
-
-  .layout-gutter
-    :width 5px
-  .layout-sep
-    :height 5px
-    :line-height 0px
-
-.main-row
-  :min-height 600px
-
 #sidebar
   :width 175px
   :height 100%
-
-  .white-blue-rounded-box-content-cell
-    :vertical-align top
+  :vertical-align top
 
   .vert-bar
     :padding-top = !gap_huge
@@ -52,12 +41,10 @@
   :width 700px
   :min-height = 600px
 
-.footermask
-  :width 90%
-  :margin auto
+.layout-sep
+  :height = !gap_medium
 
 #footer
   :clear both
   :text-align center
-  :height = !footer_height
   :color = !footer_color

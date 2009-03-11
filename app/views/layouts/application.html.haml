@@ -15,20 +15,10 @@
 
     .mainmask
       - rounded_box 'blue-transparent' do
-        .main-layout
-          %table
-            %tr.main-row
-              %td#sidebar
-                - rounded_box 'white-blue' do
-                  = render :partial => 'layouts/nav'
-              %td.layout-gutter
-              %td
-                - rounded_box 'white-blue' do
-                  #main
-                    = yield :layout
-            %tr.layout-sep
-              %td{ :colspan => 3 } &nbsp;
-            %tr
-              %td#footer{ :colspan => 3 }
-                - rounded_box 'footer' do
-                  &copy; 2005 - 2009 Srikanth Agaram
+        - columns = [{:partial => 'layouts/nav', :id => 'sidebar'}, {:yield => true, :id => 'main'}]
+        - layout_column_boxes 'white-blue', columns do
+          = yield :layout
+        .layout-sep
+        #footer
+          - rounded_box 'footer' do
+            &copy; 2005 - 2009 Srikanth Agaram
