@@ -1,0 +1,6 @@
+- if @post.nil?
+  This post doesn't exist. Please try another
+- else
+  %h1.title= @post[:title].titleize
+  .sep
+  = render :file => (@posts_dir + @post[:file])

@@ -9,7 +9,11 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    puts params[:id]
+    @post = nil
+    @posts.each do |post|
+      @post = post if post[:id].to_s == params[:id]
+    end
+    @posts_dir = POSTS_DIR
   end
 
   def index
