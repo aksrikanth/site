@@ -1,5 +1,5 @@
 .headermask, .mainmask
-  :width 900px
+  :width = !page_width
   :margin auto
 
 .mainmask
@@ -21,12 +21,13 @@
   a
     :display = block
     :padding = 2px 5px
+    :color = !sidebar_link_color
     :background-color = !sidebar_link_bg_color
 
     &:hover
       :text-decoration none
+      :color = !sidebar_link_hover_color
       :background-color = !sidebar_link_hover_bg_color
-      :color = !secondary_color_a_3
 
 #main
   :width 700px
@@ -43,7 +44,7 @@
   :text-align center
   :color = !footer_color
 
-.entry
+.article
   :margin 0
   .title, .title a
     :color = !title_color
@@ -52,7 +53,22 @@
     :font-family monospace
 
   .snippet
+    :text-align justify
+
     .continue
       :text-align right
       a
         :font-weight bold
+
+.post-body
+  :text-align justify
+
+  .image
+    :max-width 300px
+    :padding = !gap_medium
+    :margin = !gap_medium
+    :background-color = !highlight_bg_color
+
+    .caption
+      :font-size = !font_size_note
+      :color = !highlight_color

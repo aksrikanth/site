@@ -1,3 +1,8 @@
+// Sizes {{{
+!page_width = 900px
+!main_width = 700px
+!sidebar_width = !page_width - !main_width - 25px
+
 !gap_none = 0px
 !gap_small = 2px
 !gap_medium = 5px
@@ -8,38 +13,46 @@
 !gutter_height = 10px
 !gutter_internal_width = 10px
 
+!font_size_title = 2.2em
+!font_size_subtitle = 1.8em
+!font_size_header = 1.5em
+!font_size_subheader = 1em
+!font_size_note = 0.9em
+!font_size_footnote = 0.85em
+// }}}
+
 // Colorscheme {{{
 // http://colorschemedesigner.com/#2Q627hWs0g0g0
 // Primary Colors:
-!primary_color_1 = #4DB054
-!primary_color_2 = #4E9A53
-!primary_color_3 = #309136
-!primary_color_4 = #64C36A
-!primary_color_5 = #6FC374
+!primary_color_1 =       #12B51D
+!primary_color_2 =       #307935
+!primary_color_3 =       #036109
+!primary_color_4 =       #5BE664
+!primary_color_5 =       #92E697
 
 // Secondary Colors A:
-!secondary_color_a_1 = #456E90
-!secondary_color_a_2 = #44647E
-!secondary_color_a_3 = #2B5477
-!secondary_color_a_4 = #5D88AC
-!secondary_color_a_5 = #668CAC
+!secondary_color_a_1 =   #185C94
+!secondary_color_a_2 =   #2B4A63
+!secondary_color_a_3 =   #042E50
+!secondary_color_a_4 =   #60A3DB
+!secondary_color_a_5 =   #90B9DB
 
 // Secondary Colors B:
-!secondary_color_b_1 = #C1D75F
-!secondary_color_b_2 = #ABBC60
-!secondary_color_b_3 = #9CB13B
-!secondary_color_b_4 = #CDE173
-!secondary_color_b_5 = #CFE17F
+!secondary_color_b_1 =   #B9DD16
+!secondary_color_b_2 =   #84943B
+!secondary_color_b_3 =   #627704
+!secondary_color_b_4 =   #D9F361
+!secondary_color_b_5 =   #E3F39B
 
 // Complementary Colors:
-!complementary_color_1 = #DF6562
-!complementary_color_2 = #C36664
-!complementary_color_3 = #B8403D
-!complementary_color_4 = #E77976
-!complementary_color_5 = #E78583
+!complementary_color_1 = #E61C17
+!complementary_color_2 = #9A3F3D
+!complementary_color_3 = #7B0704
+!complementary_color_4 = #F66662
+!complementary_color_5 = #F69F9C
 // }}}
 
-//!page_bg_color = #415e0b
+// Colors {{{
 !page_bg_color = !primary_color_3
 !header_bg_color = transparent
 !sidebar_bg_color = white
@@ -48,9 +61,14 @@
 !footer_bg_color = !secondary_color_a_2
 !footer_color = !secondary_color_b_5
 
-!link_color = !secondary_color_a_5
+!link_color = !secondary_color_a_1
 
+!sidebar_link_color = !link_color
 !sidebar_link_bg_color = !secondary_color_b_5
+!sidebar_link_hover_color = !secondary_color_a_3
 !sidebar_link_hover_bg_color = !complementary_color_5
 
 !title_color = !complementary_color_3
+!highlight_color = black
+!highlight_bg_color = !secondary_color_a_5
+// }}}

@@ -2,5 +2,7 @@
   This post doesn't exist. Please try another
 - else
   %h1.title= @post[:title].titleize
+  .time= @post[:time].to_s(:post_full)
   .sep
-  = render :file => (@posts_dir + @post[:file])
+  .post-body
+    = render :file => (@posts_dir + @post[:file])

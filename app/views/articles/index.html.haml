@@ -2,9 +2,9 @@
 .sep
 - unless @articles.nil? or @articles.blank?
   - @articles.each do |article|
-    .entry
+    .article
       .title
-        .rcol.time== [ #{ article[:time].to_s(:short) } ]
+        .rcol.time== [ #{ article[:time].to_s(:post_short) } ]
         .col
           %h3
             = link_to article[:title].titleize, article_path(article[:id]), :class => 'no-hover'
