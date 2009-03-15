@@ -6,19 +6,23 @@ class ArticlesController < ApplicationController
 
   def load_posts
     @posts = YAML::load(File.open(POSTS_FILE))
+    @articles = @posts.sort do |a, b|
+      b[:time] <=> a[:time]
+    end
   end
 
   def show
-    @post = nil
-    @posts.each do |post|
-      @post = post if post[:id].to_s == params[:id]
+    @article = nil
+    @articles.each do |article|
+      @article = article if article[:id].to_s == params[:id]
     end
     @posts_dir = POSTS_DIR
   end
 
   def index
-    @articles = @posts.sort do |a, b|
-      b[:time] <=> a[:time]
+    respond_to do |format|
+      format.html
+      format.atom
     end
   end
 end

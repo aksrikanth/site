@@ -1,8 +1,8 @@
-- if @post.nil?
+- if @article.nil?
   This post doesn't exist. Please try another
 - else
-  %h1.title= @post[:title].titleize
-  .time= @post[:time].to_s(:post_full)
+  %h1.title= @article[:title].titleize
+  .time= @article[:time].to_s(:post_full)
   .sep
   .post-body
-    = render :file => (@posts_dir + @post[:file])
+    = render :file => (@posts_dir + @article[:file])

@@ -1,5 +1,8 @@
+.rcol.feed
+  = link_to image_tag('/images/rss.png', :title => 'atom feed'), atom_feed_path
 %h1.title Articles
 .sep
+.clear-both
 - unless @articles.nil? or @articles.blank?
   - @articles.each do |article|
     .article

@@ -38,11 +38,16 @@ ActionController::Routing::Routes.draw do |map|
   # Install the default routes as the lowest priority.
   # Note: These default routes make all actions in every controller accessible via GET requests. You should
   # consider removing the them or commenting them out if you're using named routes and resources.
+  #map.connect ':controller/:action/:id'
+  #map.connect ':controller/:action/:id.:format'
+
   map.resources :articles
-  map.connect ':controller/:action/:id'
-  map.connect ':controller/:action/:id.:format'
+  def atom_feed_path(*args) ; articles_path(*args) + '.atom' ; end
+
   map.root :controller => 'home'
+
   def home_path(*args) ; root_path(*args) ; end
   def home_url(*args) ; root_url(*args) ; end
+
   map.connect '*path', :controller => 'static', :action => 'show'
 end
