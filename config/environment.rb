@@ -72,8 +72,4 @@ Rails::Initializer.run do |config|
   # Activate observers that should always be running
   # Please note that observers generated using script/generate observer need to have an _observer suffix
   # config.active_record.observers = :cacher, :garbage_collector, :forum_observer
-
-  Time::DATE_FORMATS[:post_full] = "%A %B %d, %Y."
-  Time::DATE_FORMATS[:post_short] = "%b %d %Y"
-  Time::DATE_FORMATS[:feed] = "%Y-%m-%dT%H:%M:%SZ"
 end
