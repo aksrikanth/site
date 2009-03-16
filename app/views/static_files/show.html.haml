@@ -1,0 +1,4 @@
+- unless @file.nil?
+  = render :file => @file
+- else
+  = render :text => "Nothing to see here", :status => 404

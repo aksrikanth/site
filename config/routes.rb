@@ -42,12 +42,11 @@ ActionController::Routing::Routes.draw do |map|
   #map.connect ':controller/:action/:id.:format'
 
   map.resources :articles
+  map.resources :static, :controller => 'static_files', :only => [:show]
   def atom_feed_path(*args) ; articles_path(*args) + '.atom' ; end
 
-  map.root :controller => 'home'
+  map.root :controller => 'articles'
 
   def home_path(*args) ; root_path(*args) ; end
   def home_url(*args) ; root_url(*args) ; end
-
-  map.connect '*path', :controller => 'static', :action => 'show'
 end

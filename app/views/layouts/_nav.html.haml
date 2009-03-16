@@ -1,7 +1,10 @@
 %ul.vert-bar
   %li= link_to 'Home page', home_path
-  %li= link_to 'Articles', articles_path
   %li= link_to 'Scrapbook', 'http://scrapbook.srikanthak.name/'
-  %li= link_to 'Code', 'http://github.com/akincisor'
-  %li= link_to 'Publications', '#'
-  %li= link_to 'CV', '#'
+  %li= link_to 'Code', static_path('code')
+  %li= link_to 'Publications', static_path('publications')
+  %li= link_to 'CV', '/files/srikanth_resume.pdf'
+
+.sep
+
+= link_to image_tag('/images/rss.png', :title => 'atom feed'), atom_feed_path
