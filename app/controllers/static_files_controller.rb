@@ -1,10 +1,12 @@
 class StaticFilesController < ApplicationController
   STATIC_DIR = "#{RAILS_ROOT}/public/static/"
+  STATIC_EXT = '.html.haml'
 
-  def show
-    path = params[:id]
-    if template_exists?(STATIC_DIR + path + '.html.haml')
-      @file = STATIC_DIR + path + '.html.haml'
+  def index
+    if template_exists? path = STATIC_DIR + params[:path].join('/') + STATIC_EXT
+      render :file => path, :layout => true
+    else
+      render :text => 'Nothing to see here', :layout => true
     end
   end
 
