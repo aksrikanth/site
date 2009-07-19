@@ -16,7 +16,6 @@ class ArticlesController < ApplicationController
     @articles.each do |article|
       @article = article if article[:id].to_s == params[:id]
     end
-    expire_page(:controller => 'articles', :action => 'show', :id => params[:id])
     @posts_dir = POSTS_DIR
   end
 
