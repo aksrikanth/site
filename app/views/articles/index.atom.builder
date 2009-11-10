@@ -12,6 +12,7 @@ atom_feed :language => 'en-us', :root_url => articles_url do |feed|
   @articles.each do |article|
     feed.entry(
       article,
+      :id => "article#{article[:id]}",
       :url => article_path(article[:id]),
       :updated => article[:time]
     ) do |entry|
