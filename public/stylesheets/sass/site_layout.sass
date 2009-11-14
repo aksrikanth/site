@@ -1,36 +1,62 @@
-.headermask, .mainmask
+.page
   :width = !page_width
   :margin auto
-
-.mainmask
-  :padding-bottom = !gap_huge
 
 #header
   :background-color = !header_bg_color
 
+.mainmask
+  :width 700px
+  :padding = !gap_medium
+  :background-color = !page_bg_color
+  -moz-border-radius: 5px
+  -moz-border-radius-topright: 0px
+  -webkit-border-radius: 5px
+  :margin-bottom = !gap_huge
+
+.sidebarmask
+  :width 180px
+  :padding = !gap_medium
+  :padding-left = !gap_none
+  :background-color = !page_bg_color
+  -moz-border-radius: 5px
+  -moz-border-radius-topleft: 0px
+  -moz-border-radius-bottomleft: 0px
+  -webkit-border-radius: 5px
+  -webkit-border-radius-topleft: 0px
+  -webkit-border-radius-bottomleft: 0px
+
 #sidebar
-  :width 175px
+  :background-color = !sidebar_bg_color
   :vertical-align top
+  :padding = !gap_medium
+  -moz-border-radius: 5px
+  -webkit-border-radius: 5px
 
-  .vert-bar
-    :padding-top = !gap_huge
+ul.vert-bar
+  :padding-top = !gap_huge
 
-    li
-      :margin = !gap_medium !gap_none
+  li
+    :margin = !gap_medium !gap_none
 
-      a
-        :display = block
-        :padding = 2px 5px
-        :color = !sidebar_link_color
-        :background-color = !sidebar_link_bg_color
+    a
+      :display = block
+      :padding = 2px 5px
+      :color = !sidebar_link_color
+      :background-color = !sidebar_link_bg_color
+      -moz-border-radius: 5px
+      -webkit-border-radius: 5px
 
-        &:hover
-          :text-decoration none
-          :color = !sidebar_link_hover_color
-          :background-color = !sidebar_link_hover_bg_color
+      &:hover
+        :text-decoration none
+        :color = !sidebar_link_hover_color
+        :background-color = !sidebar_link_hover_bg_color
 
 #main
-  :width 700px
+  :padding = !gap_large
+  :background-color = !main_bg_color
+  -moz-border-radius: 5px
+  -webkit-border-radius: 5px
 
 #main-content
   :min-height = 600px
@@ -40,6 +66,10 @@
   :height = !gap_medium
 
 #footer
+  :padding = !gap_medium
+  :background-color = !footer_bg_color
+  -moz-border-radius: 5px
+  -webkit-border-radius: 5px
   :clear both
   :text-align center
   :color = !footer_color
