@@ -5,10 +5,15 @@
   %li= link_to 'Publications', publications_path
   %li= link_to 'CV', '/files/srikanth_resume.pdf'
 
-.sep
+.sep-internal
 
-= link_to image_tag('/images/rss.png', :title => 'atom feed'), atom_feed_path
+.col.subscribe-img
+  = link_to image_tag('/images/rss.png', :title => 'atom feed'), atom_feed_path
+.col.gutter-small
+.col.subscribe-link
+  = link_to 'Subscribe', atom_feed_path
+.clear-left
 
-.sep
+.sep-internal
 
 = link_to 'Feedback', 'mailto:ak@srikanthak.name'

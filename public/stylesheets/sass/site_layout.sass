@@ -16,7 +16,7 @@
   :margin-bottom = !gap_huge
 
 .sidebarmask
-  :width 180px
+  :width = !sidebar_width
   :padding = !gap_medium
   :padding-left = !gap_none
   :background-color = !page_bg_color
@@ -52,6 +52,26 @@ ul.vert-bar
         :text-decoration none
         :color = !sidebar_link_hover_color
         :background-color = !sidebar_link_hover_bg_color
+
+.subscribe-img
+  :height 32px
+  :width 32px
+  :background-color #f66662
+  -moz-border-radius: 5px
+  -webkit-border-radius: 5px
+
+.subscribe-link
+  :height 32px
+  :line-height 32px
+  :width = !sidebar_width - 32px - 3*!gap_medium
+  :text-align center
+  :background-color #f66662
+  -moz-border-radius: 5px
+  -webkit-border-radius: 5px
+  a
+    :color #e3f39b
+    &:hover
+      :text-decoration none
 
 #main
   :padding = !gap_large
