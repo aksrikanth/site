@@ -1,6 +1,14 @@
+- scrapbook = capture_haml do
+  Scrapbook
+  = image_tag '/images/external.png', :title => 'external'
+
+- feedback = capture_haml do
+  Feedback
+  = image_tag '/images/external.png', :title => 'external'
+
 %ul.vert-bar
   %li= link_to 'Home page', home_path
-  %li= link_to 'Scrapbook', 'http://scrapbook.srikanthak.name/'
+  %li= link_to scrapbook, 'http://scrapbook.srikanthak.name/', :target => '_blank'
   %li= link_to 'Code', code_path
   %li= link_to 'Publications', publications_path
   %li= link_to 'CV', '/files/srikanth_resume.pdf'
@@ -16,4 +24,4 @@
 
 .sep-internal
 
-= link_to 'Feedback', 'mailto:ak@srikanthak.name'
+= link_to feedback, 'mailto:ak@srikanthak.name'
