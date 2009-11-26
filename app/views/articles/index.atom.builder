@@ -6,14 +6,14 @@ atom_feed :language => 'en-us', :root_url => articles_url do |feed|
     author.name 'Srikanth Agaram'
     author.url home_url
   end
-  feed.icon '/images/favicon.png'
+  feed.icon image_url('favicon.png')
   feed.rights 'copyright 2005-2009 Srikanth Agaram'
 
   @articles.each do |article|
     feed.entry(
       article,
       :id => "article#{article[:id]}",
-      :url => article_path(article[:id]),
+      :url => article_url(article[:id]),
       :updated => article[:time]
     ) do |entry|
 
@@ -21,10 +21,10 @@ atom_feed :language => 'en-us', :root_url => articles_url do |feed|
 
       entry.summary :type => 'xhtml' do |xhtml|
         xhtml.p article[:snippet]
-        xhtml.a 'read full article', :href => article_path(article[:id])
+        xhtml.a 'read full article', :href => article_url(article[:id])
       end
 
-      entry.link :rel => 'alternate', :href => article_path(article[:id])
+      entry.link :rel => 'alternate', :href => article_url(article[:id])
 
       entry.author do |author|
         author.name 'Srikanth Agaram'
