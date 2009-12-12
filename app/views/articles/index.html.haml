@@ -2,12 +2,14 @@
   - @articles.each do |article|
     .article
       .title
-        .rcol.time== [ #{ article[:time].to_s(:post_short) } ]
+        .rcol.time
+          %time{ :datetime => article[:time].iso8601, :title => article[:time].to_s(:post_long) }
+            = relative_time article[:time]
         %h3
           = link_to article[:title], article_path(article[:id]), :class => 'no-hover'
         .clear-both
       %blockquote.snippet
         = article[:snippet]
-        .continue= link_to 'read entire article &raquo;', article_path(article[:id])
+        .continue= link_to 'click here for full article &raquo;', article_path(article[:id])
 - else
   There's nothing to see here. Please move along.

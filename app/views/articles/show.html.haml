@@ -2,7 +2,9 @@
   This post doesn't exist. Please try another
 - else
   %h1.title= @article[:title]
-  .time= @article[:time].to_s(:post_full)
+  .time
+    %time{ :datetime => @article[:time].iso8601, :title => @article[:time].to_s(:post_full) }
+      = relative_time @article[:time]
   .sep
   .post-body
     -# Fix the caching problem in development

@@ -1,6 +1,8 @@
 class ArticlesController < ApplicationController
   before_filter :load_posts
 
+  helper DateHelper
+
   POSTS_DIR = "#{RAILS_ROOT}/app/views/articles/posts/"
   POSTS_FILE = "#{POSTS_DIR}posts.yml"
 
