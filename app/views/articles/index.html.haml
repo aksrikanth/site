@@ -3,7 +3,7 @@
     .article
       .title
         .rcol.time
-          %time{ :datetime => article[:time].iso8601, :title => article[:time].to_s(:post_long) }
+          %time{ :datetime => article[:time].iso8601, :title => article[:time].to_s(:post_full) }
             = relative_time article[:time]
         %h3
           = link_to article[:title], article_path(article[:id]), :class => 'no-hover'
