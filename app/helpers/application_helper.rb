@@ -3,8 +3,8 @@ module ApplicationHelper
 
   def image_url(source)
     url = image_path(source)
-    unless url =~ /^http:\/\//
-      url = "http#{'s' if request.ssl?}://#{request.host_with_port}#{url}"
+    unless url =~ /^#{request.protocol}/
+      url = "#{request.protocol}#{request.host_with_port}#{url}"
     end
     url
   end
