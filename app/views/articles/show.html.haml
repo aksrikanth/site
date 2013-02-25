@@ -4,12 +4,14 @@
   %h1.title= @article[:title]
   .time
     %time{ :datetime => @article[:time].iso8601, :title => @article[:time].to_s(:post_full) }
-      = relative_time @article[:time]
+      -#= relative_time @article[:time]
+      = @article[:time]
   .sep
   .post-body
     -# Fix the caching problem in development
-    - if RAILS_ENV == 'development'
-      - File.open(@posts_dir + @article[:file]) do |file|
+    - filename = ::Rails.root.join(Site.configuration[:posts_dir], @article[:file])
+    - if Rails.env.development?
+      - File.open(filename) do |file|
         = render :inline => file.read, :type => :haml
     - else
-      = render :file => (@posts_dir + @article[:file])
+      = render :file => filename

@@ -1,3 +1,4 @@
-app/views/articles/posts
+.bundle
 log/*
-public/stylesheets/*.css
+vendor/bundle
+tmp/*

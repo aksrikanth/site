@@ -1,26 +1,11 @@
-- if @title.nil?
-  - @title = "Srikanth's Homepage"
-!!! XML
-!!!
-%html{ html_attrs }
+!!! 5
+%html{html_attrs, 'xmlns:og' => 'http://opengraphprotocol.org/schema/'}
   %head
-    %title
-      = @title
-    = stylesheet_link_tag 'srikanthak'
-    %link{ :rel => 'shortcut icon', :href => image_path('favicon.png')}
-    %link{ :rel => 'me', :type => 'text/html', :href => 'http://www.google.com/profiles/aksrikanth' }
-    = auto_discovery_link_tag(:atom, atom_feed_path)
+    %title Srikanth Agaram
+    = favicon_link_tag 'favicon.ico'
+    = stylesheet_link_tag "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+    = auto_discovery_link_tag(:atom, articles_path(:format => :atom))
   %body
-    .page
-      #header
-        = link_to image_tag('logo.png'), home_path
-      .mainmask.col
-        #main
-          = yield
-        .sep.sep-small
-        #footer
-          &copy; 2005 - 2011 Srikanth Agaram
-      .sidebarmask.col
-        #sidebar
-          = render :partial => 'layouts/nav'
-      .clear-left
+    = yield

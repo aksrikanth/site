@@ -1,7 +1,0 @@
-Static files:
-  The any files placed in the static directory should be served up when /static/file-basename is requested
-
-Blog:
-  list the file-basenames of all the files in the blogs directory
-
-  when a /blogs/file-basename is requested the appropriate file should be rendered

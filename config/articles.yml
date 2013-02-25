@@ -1,0 +1,12 @@
+common: &default
+  posts_dir: "../articles/"
+  posts_file: "posts.yml"
+  
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default

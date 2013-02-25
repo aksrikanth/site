@@ -4,9 +4,9 @@ atom_feed :language => 'en-us', :root_url => articles_url do |feed|
   feed.updated @articles.first[:time]
   feed.author do |author|
     author.name 'Srikanth Agaram'
-    author.url home_url
+    author.url root_url
   end
-  feed.icon image_url('favicon.png')
+  feed.icon asset_path('favicon.png')
   feed.rights 'copyright 2005-2009 Srikanth Agaram'
 
   @articles.each do |article|
@@ -28,7 +28,7 @@ atom_feed :language => 'en-us', :root_url => articles_url do |feed|
 
       entry.author do |author|
         author.name 'Srikanth Agaram'
-        author.url home_url
+        author.url root_url
       end
 
     end
