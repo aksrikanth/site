@@ -1,16 +1,13 @@
 - unless @articles.nil? or @articles.blank?
   - @articles.each do |article|
-    .article
-      .title
-        .rcol.time
-          %time{ :datetime => article[:time].iso8601, :title => article[:time].to_s(:post_full) }
-            -#= relative_time article[:time]
-            = article[:time]
-        %h3
-          = link_to article[:title], article_path(article[:id]), :class => 'no-hover'
+    %article.article
+      %header.title
+        %time.right-time{ :datetime => article[:time].iso8601, :title => article[:time].to_s(:post_full) }
+          = time_ago_in_words(article[:time])
+        %h3= article[:title]
         .clear-both
-      %blockquote.snippet
+      %p.snippet
         = article[:snippet]
-        .continue= link_to 'click here for full article &raquo;'.html_safe, article_path(article[:id])
+      .continue= link_to 'read full article &raquo;'.html_safe, article_path(article[:id])
 - else
   There's nothing to see here. Please move along.

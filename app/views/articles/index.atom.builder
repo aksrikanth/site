@@ -1,6 +1,6 @@
 atom_feed :language => 'en-us', :root_url => articles_url do |feed|
-  feed.title "Srikanth's Articles"
-  feed.subtitle "Everything from cricket to programming"
+  feed.title %|Srikanth's Articles|
+  feed.subtitle 'Everything from cricket to programming'
   feed.updated @articles.first[:time]
   feed.author do |author|
     author.name 'Srikanth Agaram'
@@ -21,7 +21,7 @@ atom_feed :language => 'en-us', :root_url => articles_url do |feed|
 
       entry.summary :type => 'xhtml' do |xhtml|
         xhtml.p article[:snippet]
-        xhtml.a 'click here for full article', :href => article_url(article[:id])
+        xhtml.a 'read full article', :href => article_url(article[:id])
       end
 
       entry.link :rel => 'alternate', :href => article_url(article[:id])

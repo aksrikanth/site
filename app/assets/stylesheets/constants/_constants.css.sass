@@ -1,0 +1,76 @@
+@import url(http://fonts.googleapis.com/css?family=Josefin+Slab|Open+Sans|Droid+Sans+Mono|Special+Elite)
+@import compass/css3/opacity
+
+// Sizes
+$paragraph_gap: 1em
+
+// Colors: http://colorschemedesigner.com/#2532qhWs0g0g0
+// primary (green)   #C6D85F #AFBD61 #A1B33B #D1E273 #D3E280
+// secondary (blue)  #DF8962 #C38164 #B8633D #E79976 #E7A283
+// tertiary (yellow) #4E5999 #4D5586 #313B7E #6671B3 #6F78B3
+
+$text_color: #666
+$header_color: #333
+$link_color: #313b7e
+$visited_link_color: #6f78b3
+
+// Typography
+$header_font_family: 'Josefin Slab', serif
+$text_font_family: 'Open Sans', sans-serif
+$code_font_family: 'Droid Sans Mono', monospace
+$logo_font_family: 'Special Elite', cursive
+
+$text_font_size: 16px
+$logo_font_size: 2.2em
+$title_font_size: 2.2em
+$section_title_font_size: 1.5em
+
+$text_line_height: 1.4em
+// Mixins
+@mixin float_container
+  &:after
+    clear: both
+    content: ' '
+    display: block
+    height: 0
+    margin: 0
+    padding: 0
+    visibility: hidden
+
+@mixin text
+  color: $text_color
+  font-family: $text_font_family
+  font-size: $text_font_size
+
+@mixin header
+  color: $header_color
+  font-family: $header_font_family
+
+$title_margin: 0 0 30px
+@mixin title
+  +header
+  font-size: $title_font_size
+
+$section_title_margin: 0 0 20px
+@mixin section_title
+  +header
+  font-size: $section_title_font_size
+  margin: $section_title_margin
+
+@mixin link
+  color: $link_color
+  text-decoration: none
+  &:visited
+    color: $visited_link_color
+
+@mixin logo
+  color: $header_color
+  font-size: $logo_font_size
+  font-family: $logo_font_family
+
+@mixin paragraph
+  line-height: $text_line_height
+  text-align: justify
+  margin-bottom: $paragraph_gap
+  &:last-child
+    margin-bottom: 0

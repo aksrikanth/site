@@ -1,13 +1,12 @@
 - if @article.nil?
   This post doesn't exist. Please try another
 - else
-  %h1.title= @article[:title]
-  .time
-    %time{ :datetime => @article[:time].iso8601, :title => @article[:time].to_s(:post_full) }
-      -#= relative_time @article[:time]
-      = @article[:time]
-  .sep
-  .post-body
+  %article.article
+    %header.title
+      %h1= @article[:title]
+      %time.time{ :datetime => @article[:time].iso8601, :title => @article[:time].to_s(:post_full) }
+        = time_ago_in_words(@article[:time])
+
     -# Fix the caching problem in development
     - filename = ::Rails.root.join(Site.configuration[:posts_dir], @article[:file])
     - if Rails.env.development?

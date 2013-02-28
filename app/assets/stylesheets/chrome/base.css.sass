@@ -1,0 +1,124 @@
+@import compass/reset
+@import constants/constants
+
+html
+  min-height: 100%
+
+body
+  +text
+  position: relative
+  min-height: 100%
+  background: #eee
+
+header
+  margin: $title_margin
+
+h1
+  +title
+
+h3
+  +section_title
+
+a
+  +link
+
+a.logo
+  +logo
+
+p, ul, ol, pre, dl
+  +paragraph
+
+// h1
+//   +title
+
+// h2
+//   +section_title
+
+// h3
+//   +subsection_title
+
+// h4
+//   +small_title
+
+// a
+//   +link
+
+// p, li
+//   text-align: left
+
+// ul
+//   +bulleted_list
+
+// ol
+//   +numbered_list
+
+// dl
+//   +definition_list
+
+// strong
+//   font-weight: bold
+
+// em
+//   font-style: italic
+
+// code
+//   +code
+
+// pre
+//   +preformatted
+
+// .header
+//   +underline
+//   // the - 1 is added due to the underline
+//   height: $header_height - 2*$page_gap - 1
+//   padding: $page_gap
+//   position: relative
+//   text-align: right
+
+// $chrome-sprite-url: image-url('chrome.png')
+// @import sprites/chrome
+
+// .logo
+//   +logo_sprite
+//   +logo
+
+// .logo-footer
+//   +logo_footer_sprite
+//   +logo_footer
+
+// .close
+//   +close_sprite
+//   +close
+
+// .info
+//   +info
+
+// .noscript
+//   +error
+//   margin-top: $page_gap
+//   font-size: $text_font_size
+//   h2
+//     color: $error_color
+//   p
+//     margin: 0
+
+// .list
+//   +list
+
+// .horizontal-list
+//   +horizontal_list
+
+// .sidebar-list
+//   +sidebar_list
+
+// .nav-list
+//   +nav_list
+
+// .hide
+//   display: none
+
+// .small
+//   +small
+
+// .unimportant
+//   +unimportant

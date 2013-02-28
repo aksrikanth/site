@@ -1,11 +1,22 @@
 !!! 5
 %html{html_attrs, 'xmlns:og' => 'http://opengraphprotocol.org/schema/'}
   %head
-    %title Srikanth Agaram
+    %title= @title.present? ? "#{@title} - Srikanth Agaram" : 'Srikanth Agaram'
     = favicon_link_tag 'favicon.ico'
     = stylesheet_link_tag "application", :media => "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
     = auto_discovery_link_tag(:atom, articles_path(:format => :atom))
   %body
-    = yield
+    %header.top
+      = link_to %q(Srikanth's Blog), root_path, :class => 'logo'
+      -# = link_to root_path(:format => :atom), :class => 'feed' do
+      -#   = image_tag asset_path('rss.png')
+      .subtitle
+        Everything from cricket to programming.
+
+    %aside.sidebar
+    %section.main
+      = yield
+    %footer.bottom
+      © 2005-2013 Srikanth Agaram
