@@ -6,8 +6,8 @@ $paragraph_gap: 1em
 
 // Colors: http://colorschemedesigner.com/#2532qhWs0g0g0
 // primary (green)   #C6D85F #AFBD61 #A1B33B #D1E273 #D3E280
-// secondary (blue)  #DF8962 #C38164 #B8633D #E79976 #E7A283
-// tertiary (yellow) #4E5999 #4D5586 #313B7E #6671B3 #6F78B3
+// secondary (yellow)  #DF8962 #C38164 #B8633D #E79976 #E7A283
+// tertiary (blue) #4E5999 #4D5586 #313B7E #6671B3 #6F78B3
 
 $text_color: #666
 $header_color: #333
@@ -15,10 +15,10 @@ $link_color: #313b7e
 $visited_link_color: #6f78b3
 
 // Typography
-$header_font_family: 'Josefin Slab', serif
-$text_font_family: 'Open Sans', sans-serif
-$code_font_family: 'Droid Sans Mono', monospace
-$logo_font_family: 'Special Elite', cursive
+$header_font_family: 'Josefin Slab', 'Palatino Linotype', 'Book Antiqua', 'Palatino', serif
+$text_font_family: 'Open Sans', 'Century Gothic', sans-serif
+$code_font_family: 'Droid Sans Mono', 'Lucida Console', 'Monaco', monospace
+$logo_font_family: 'Special Elite', 'Courier New', 'Courier', monospace
 
 $text_font_size: 16px
 $logo_font_size: 2.2em
@@ -51,7 +51,7 @@ $title_margin: 0 0 30px
   +header
   font-size: $title_font_size
 
-$section_title_margin: 0 0 20px
+$section_title_margin: 30px 0 20px
 @mixin section_title
   +header
   font-size: $section_title_font_size

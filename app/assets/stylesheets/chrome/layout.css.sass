@@ -1,12 +1,47 @@
 @import constants/constants
 
-.main, .top
+.hide
+  display: none
+
+.sidebar
+  position: absolute
+  right: 0
+
+.sidebar-button
+  padding: 5px 20px
+  background: #ddd
+  color: #aaa
+  width: 50%
+  margin-left: 50%
+  font-size: $logo_font_size
+  border-top-left-radius: 5px
+
+.vertical-list
+  width: 10em
+  padding: 15px
+  background: white
+  border-radius: 5px
+  border-top-right-radius: 0
+  border-bottom-right-radius: 0
+  box-shadow: 0 1px 2px #ccc
+  li
+    &:before
+      content: none
+  a
+    display: block
+    padding: 0 5px
+    border-radius: 5px
+    &:hover
+      background: #d3e280
+      color: #313b7e
+
+.main
   max-width: 40em
   margin: 0 auto
 
 .top
   text-align: center
-  padding: 40px
+  padding: 40px 0
 
 .bottom
   text-align: center

@@ -1,6 +1,11 @@
 @import compass/reset
 @import constants/constants
 
+*
+  -moz-box-sizing: border-box
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+
 html
   min-height: 100%
 
@@ -9,9 +14,6 @@ body
   position: relative
   min-height: 100%
   background: #eee
-
-header
-  margin: $title_margin
 
 h1
   +title
@@ -28,6 +30,12 @@ a.logo
 p, ul, ol, pre, dl
   +paragraph
 
+ul
+  li
+    &:before
+      content: '■'
+      color: #df8962
+      margin-right: 5px
 // h1
 //   +title
 
