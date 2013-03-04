@@ -18,7 +18,7 @@
 
 .vertical-list
   width: 10em
-  padding: 15px
+  padding: 10px 0
   background: white
   border-radius: 5px
   border-top-right-radius: 0
@@ -29,8 +29,12 @@
       content: none
   a
     display: block
-    padding: 0 5px
-    border-radius: 5px
+    padding: 0 15px
+    &:before
+      content: '■'
+      color: #df8962
+      margin-right: 5px
+
     &:hover
       background: #d3e280
       color: #313b7e

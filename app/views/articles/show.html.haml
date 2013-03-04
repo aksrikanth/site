@@ -11,6 +11,6 @@
     - filename = ::Rails.root.join(Site.configuration[:posts_dir], @article[:file])
     - if Rails.env.development?
       - File.open(filename) do |file|
-        = render :inline => file.read, :type => :haml
+        = raw PandocRuby.convert(file.read)
     - else
       = render :file => filename
