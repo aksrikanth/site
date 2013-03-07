@@ -3,6 +3,7 @@
 
 // Sizes
 $paragraph_gap: 1em
+$threshold_width: 60em
 
 // Colors: http://colorschemedesigner.com/#2532qhWs0g0g0
 // primary (green)   #C6D85F #AFBD61 #A1B33B #D1E273 #D3E280
@@ -10,6 +11,7 @@ $paragraph_gap: 1em
 // tertiary (blue) #4E5999 #4D5586 #313B7E #6671B3 #6F78B3
 
 $text_color: #666
+$logo_color: #a1b33b
 $header_color: #333
 $link_color: #313b7e
 $visited_link_color: #6f78b3
@@ -62,9 +64,11 @@ $section_title_margin: 30px 0 20px
   text-decoration: none
   &:visited
     color: $visited_link_color
+  &:hover
+    text-decoration: underline
 
 @mixin logo
-  color: $header_color
+  color: $logo_color
   font-size: $logo_font_size
   font-family: $logo_font_family
 

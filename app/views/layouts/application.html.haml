@@ -9,10 +9,8 @@
     = auto_discovery_link_tag(:atom, articles_path(:format => :atom))
   %body
     %header.top
-      %aside.sidebar= render :partial => 'layouts/nav'
+      %aside#sidebar.sidebar= render :partial => 'layouts/nav'
       = link_to t('.title'), root_path, :class => 'logo'
-      -# = link_to root_path(:format => :atom), :class => 'feed' do
-      -#   = image_tag asset_path('rss.png')
       .subtitle
         Everything from cricket to programming.
 

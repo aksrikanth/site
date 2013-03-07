@@ -4,6 +4,7 @@
   display: none
 
 .sidebar
+  width: 10em
   position: absolute
   right: 0
 
@@ -11,13 +12,14 @@
   padding: 5px 20px
   background: #ddd
   color: #aaa
-  width: 50%
-  margin-left: 50%
+  width: 2em
+  margin-left: calc(100% - 2em)
   font-size: $logo_font_size
   border-top-left-radius: 5px
 
 .vertical-list
-  width: 10em
+  position: absolute
+  width: 100%
   padding: 10px 0
   background: white
   border-radius: 5px
@@ -29,7 +31,7 @@
       content: none
   a
     display: block
-    padding: 0 15px
+    padding: 10px 15px
     &:before
       content: '■'
       color: #df8962
@@ -38,6 +40,7 @@
     &:hover
       background: #d3e280
       color: #313b7e
+      text-decoration: none
 
 .main
   max-width: 40em
@@ -49,3 +52,25 @@
 
 .bottom
   text-align: center
+
+@media only screen and (max-width: $threshold_width)
+  .sidebar
+    float: right
+    position: relative
+    width: 4.4em
+
+  .sidebar-button
+    border-bottom-left-radius: 5px
+
+  .vertical-list
+    position: absolute
+    right: 0
+    display: none
+
+  .show
+    .sidebar-button
+      border-bottom-left-radius: 0
+
+    .vertical-list
+      display: block
+      width: 10em
