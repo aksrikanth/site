@@ -2,6 +2,7 @@
 %html{html_attrs, 'xmlns:og' => 'http://opengraphprotocol.org/schema/'}
   %head
     %title= @title.present? ? t('.full_title', :title => @title) : t('.title')
+    %meta{:name => "viewport", :content => "width=device-width" }
     = favicon_link_tag 'favicon.ico'
     = stylesheet_link_tag "application", :media => "all"
     = javascript_include_tag "application"
