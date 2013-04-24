@@ -5,7 +5,7 @@ gem 'haml'
 gem 'jquery-rails'
 gem 'maruku'
 gem 'pandoc-ruby'
-gem 'rails', '3.2.12'
+gem 'rails', '3.2.13'
 gem 'sqlite3'
 gem 'thin'
 
