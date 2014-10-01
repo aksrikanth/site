@@ -1,18 +1,15 @@
 source 'https://rubygems.org'
 
+gem 'coffee-rails'
+gem 'compass'
+gem 'compass-rails'
 gem 'execjs'
 gem 'haml'
 gem 'jquery-rails'
 gem 'maruku'
 gem 'pandoc-ruby'
-gem 'rails', '3.2.13'
+gem 'rails', '~> 4.1.0'
+gem 'sass-rails', '~> 4.0'
 gem 'sqlite3'
 gem 'thin'
-
-group :assets do
-  gem 'compass'
-  gem 'compass-rails'
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-  gem 'uglifier', '>= 1.0.3'
-end
+gem 'uglifier', '>= 1.0.3'
